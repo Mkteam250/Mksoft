@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Rwanda</title>
+    <style>
+        body{
+    background-color:white;
+    overflow-x: hidden;
+    overflow-y:auto;
+}
+.head{
+    background-color:#011220;
+    position:relative;
+    top: -8px;
+    margin-left: -8px;
+    width: 110%;
+    height: 45px;
+}
+.hleft{
+    float: left;
+    margin: 10px;
+    margin-left: 30px;
+
+}
+.hleft span{
+    margin-left: 30px;
+    color: white;
+}
+
+.hright{
+    float:right;
+    margin: 10px;
+    margin-right: 150px;
+}
+.hright span{
+    margin-left: 30px;
+    color: white;
+}
+.hleft span:hover{
+    color: gray;
+    cursor: pointer;
+}
+.hright span:hover{
+    color: gray;
+    cursor: pointer;
+}
+.head2{
+  background-color: white;
+  height: 60px;
+ /* float: right;*/
+  width: 102%;
+  margin-left: -8px;
+  position: fixed;
+  top: -8px;
+}
+.head2 .log{
+  margin-left: 30px;
+  height: 40px;
+  margin-top: 10px;
+}
+.head2 .cloud{
+  height: 30px;
+  margin-top: 10px;
+  float: right;
+  margin-right: 40px;
+}
+.head2 .cloud b{
+  margin-top: 10px;
+  line-height:50px;
+  margin-right: 10px;
+}
+.head2_div{
+  background-color: white;
+  height:574px;
+  margin-top: -14px;
+  position: relative;
+  transition: 1s;
+}
+.head2_div ul li{
+  margin-top: 20px;
+  margin-left: -10px;
+  list-style: none;
+  font-size: 20px;
+  transition: 1s;
+}
+.head2_div ul li:hover{
+  color: grey;
+  cursor: pointer;
+}
+.menu{
+  float: right;
+  margin-right: -160px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+/* larg screen*/
+ @media screen and (min-width: 1300px) {
+    .head2{
+     display: none;
+    }
+    .head{
+      position: fixed;
+      background-color:rgba(0, 0, 0, 0);
+    }
+    .im_fest{
+      top: -40px;
+      height: 655px;
+      width: 110%;
+      margin-top: -20px;
+      margin-left: -8px;
+     }
+     .tri{
+      position:absolute;
+      top: 470px;
+      height: 30px;
+      margin-left: -20px;
+     }
+     .fbut{
+      position:absolute;
+      top: 300px;
+      height: 50px;
+      width: 450px;
+      font-size: 50px;
+      background-color: rgba(0, 0, 0, 0);
+      border-style: none;
+      color: white;
+      cursor: pointer;
+      margin-left: -200px;
+     }
+     hr{
+      width: 100px;
+    }
+    .inv{
+      text-align: center;
+      margin-left: 15px;
+      margin-right: 15px;
+  }
+  .inv h2:hover{
+    color: grey;
+    
+    }
+    .im1{
+      height: 650px;
+      float: left;
+      width:55%;
+      margin-left: -30px;
+    }
+    .cont span{
+      text-align: center;
+    }
+   .cont{
+    padding-top: 62px;
+   }
+   .cont span p {
+    padding: 13px;
+   }
+    .cont span p button{
+      background-color:#011220;
+      height: 45px;
+      width: 150px;
+      border-radius: 5px;
+      border: solid 1px;
+      color: white;
+    }
+    .cont span p button:hover{
+      background-color: white;
+      color: black;
+      border-color: black;
+    }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    .box{
+      content: "";
+      display: table;
+      clear: both;
+      width: 100%;
+    }
+    .box div{
+      float: left;
+      width: 20.33%;
+      margin-left:-30px ;
+      text-align: center;
+      margin: px;
+      padding: 40px;
+      transition: 0.5s;
+     /* display: none;  Hide columns by default */
+    }
+    .box div img{
+      
+      width:350px;
+      height: 300px; 
+  }
+  .box .air{
+    width:47%;
+}
+.box .air img{
+  height:300px;
+  width: 110%;
+}
+  .team{
+    width: 80%; 
+  }
+  .box div:hover{
+  border-radius: 10px;  
+  cursor: pointer;
+  margin-top: -10px;
+
+}
+
+.dropdown {
+  overflow: hidden;
+  background-color: #011220;
+  width: 33%;
+  float: left;
+  cursor: pointer;
+}
+.dropdown:hover{
+  background-color:#0d293f;
+} 
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+.dropbtn:hover{
+  color: gray;
+}
+.dropdown-content > a {
+  float: none;
+  color:white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  cursor: pointer;
+  position: absolute;
+}
+#li3 a {
+  float: none;
+  color:white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover,#li3 a:hover {
+color: grey;
+
+}
+.foot{
+  background-color: #011220;
+  margin-top: 40px;width: 100%;
+
+}
+.foot span{
+  float: right;
+  margin-right: 50px;
+  color: white;
+}
+.foot span:hover{
+  color: #717171;
+  cursor: pointer;
+}
+.foot p img {
+  margin-left: 40px;
+}
+  }
+/* small screen*/
+@media screen and (max-width: 700px) {
+  .head{
+    display: none;
+   }
+   .im_fest{
+    height: 320px;
+    width: 101%;
+    margin-top: -10px;
+    margin-left: -5px;
+   }
+   .tri{
+    position:absolute;
+    top: 260px;
+    height: 30px;
+    margin-left: -20px;
+   }
+  .fbut{
+    position:absolute;
+    top: 200px;
+    height: 40px;
+    width: 200px;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    color: white;
+    cursor: pointer;
+    margin-left: -94px;
+   }
+    hr{
+    width: 100px;
+  }
+  .inv{
+    text-align: center;
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.inv h2:hover{
+color: grey;
+
+}
+ .im1{
+    height: 250px;
+    width:102%;
+    margin-left: -7px;
+  }
+   .cont span{
+    text-align: center;
+  }
+.cont span p button{
+    background-color:#011220;
+    height: 35px;
+    width: 150px;
+    border-radius: 10px;
+    color: white;
+  }
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  .box div img{
+    width: 80%; 
+}
+.team{
+  width: 80%; 
+}
+.box div:hover{
+    background-image: linear-gradient(white,rgba(255, 255, 255, 0.733),rgba(128, 128, 128, 0.253));
+    cursor: pointer;
+}
+.dropdown {
+  overflow: hidden;
+  background-color: #011220;
+  width: 100%;
+  cursor: pointer;
+}
+.dropdown:hover{
+  background-color:#0d293f;
+} 
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+.dropbtn:hover{
+  color: gray;
+}
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  
+  background-color:#011220;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  transition: 1s;
+  cursor: pointer;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color:white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+color: grey;
+
+}
+.foot{
+  background-color: #011220;
+}
+.foot span{
+  margin: 5px;
+  color: white;
+}
+.foot span:hover{
+  color: #717171;
+  cursor: pointer;
+}
+.foot p img{
+  margin-left: 180px;
+}
+}
+
+    </style>
+</head>
+<body>
+    <!-- head top-->
+    <div class="head2">
+        <img src="photo/header-logo.png" alt=""  class="log">  
+        <span class="cloud"><b>27.1°C</b><img src="photo/03d.png" alt="" class="cloud"></span>
+        <span class="menu"><img src="photo/Capture.PNG" alt="" onclick="mk()"></span>
+        <div class="head2_div" id="m">
+        <ul>
+            <li>Tourism</li>
+            <li>Investment</li>
+            <li>Meet in Rwanda</li>
+            <li>Gorilla Gram</li>
+            <li>Practical Information</li>
+            <li>Media</li>
+            <li>Book A Trip</li>
+            <li>Partnerships</li>
+            <li>Festive Offers</li>
+        </ul>
+       </div>
+    </div>
+    <div class="head" id="h">
+         <div class="hleft">
+        <span><img src="photo/home_icon.png" alt="" ></span>
+        <span>Tourism</span>
+        <span>Investment</span>
+        <span>Meet in Rwanda</span>
+        <span>Gorilla Gram</span>
+        </div>
+        <div class="hright">
+            <span>Practical Information</span>
+            <span>Media</span>
+            <span>Book A Trip</span>
+            <span>Partnerships</span>
+            <span>Festive Offers</span>
+            </div>
+    </div>
+   <!-- body-->  
+<div style="text-align: center;">
+  <img src="photo/Festive-season-package-1920x1089.jpg" class="im_fest">
+  <p><img src="photo/traingle.png" alt="" class="tri"></p>
+  <p><button class="fbut">Festive Offers</button></p>
+  
+  <!-- tourism--> 
+  <div class="inv">
+  <p><h2>Tourism</h2> </p>
+  <hr>
+  <p>Known as the land of a thousand hills, Rwanda’s stunning scenery and warm,</p>
+  <p>friendly people offer unique experiences in one of the most remarkable</p>
+  <p>countries in the world. It is blessed with extraordinary biodiversity, with </p>
+  <p>incredible wildlife living throughout its volcanoes, montane rainforest and sweeping plains.</p>
+   <br>
+  <p>Travellers come from far and wide to catch a glimpse of the magnificent gorillas, </p>
+  <p>yet there is so much more to see and experience.</p>
+  <br><br>
+  <!-- higthlight-->
+  <div>
+    <div>
+        <img src="photo/Visit-Rwanda-NH_OO_Activities_Colobus_Monkey_Trek_2649_MASTE.jpg" alt="" class="im1">
+    </div>
+    <div class="cont">
+    <span>
+     <p><b>Highlights</b></p>
+     <p><h3>The Great Rift Valley</h3></p>   
+     <p>The west of Rwanda forms a branch of the Great Rift Valley known as the Albertine Rift.</p>
+     <p>It has many unique, endemic species and is bursting with life. </p>
+     <p>Chimpanzees, golden monkeys and other primates live alongside hundreds of brightly-coloured birds, orchids and butterflies.</p>
+     <p>And that is only scratching the surface…
+        </p>
+     <p><button>View Nation Park</button> </a></p>   
+    </span>
+    </div>
+    <div style="text-align:center" >
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+    <br><br>
+    <!-- box1-->
+    <div class="box">
+        <div>
+            <p>Responsible Tourism</p>
+            <p><h3>Gorilla tracking</h3></p>
+            <img src="photo/Visit-Rwanda_-Volcanoes-National-Park-Silverback-in-Bamboo-1.jpg" alt="">
+        </div>
+        <div>
+            <p>Culture & Heritage</p>
+            <p><h3>King's Palace</h3></p>
+            <img src="photo/Visit-Rwanda_-Nyanza-Traditional-Dancers-1280x853.jpg" alt="">
+        </div>
+        <div>
+            <p>Accommodation</p>
+            <p><h3>Where to Stay</p>
+            <img src="photo/Visit-Rwanda-Bisate-4-700x467.jpg" alt="">
+        </div>
+        <div>
+            <p>Sport & Adventure</p>
+            <p><h3>Conopy Walkway</h3></p>
+            <img src="photo/Visit-Rwanda-NH_OO_Lifestyle_Canopy_Walk_0019_MASTER-1-700x4.jpg" alt="">
+        </div>
+    </div>
+    <br><br> 
+     <!--investment-->
+     
+    <div class="inv" style="margin-left: 40px; margin-right: 40px;">
+        <p><h2>Investment</h2></p><br><hr>
+        <p>Rwanda is ranked as the second easiest place to do business in Africa by the </p>
+        <p>World Bank and has been awarded for its leadership in tourism and economic </p>
+        <p>competitiveness by the World Travel and Tourism Council (WTTC) and the</p>
+        <p>World Economic Forum respectively.</p>
+    </div> 
+    <br><br> 
+ <!-- higthlight2--> 
+    <div>
+        <div>
+            <img src="photo/Visit-Rwanda-Zipline-Medical-Drone-Drop-1280x700.jpg" alt="" class="im1">
+        </div>
+        <div class="cont">
+        <span>
+        <p><b>Tech Incubator</b></p>
+        <p><h3>Zipline</h3></p>   
+        <p>Rwanda is an ideal tech incubator, thanks to its compact size and appetite for innovation.</p>
+        <p> We welcome pioneering initiatives such as that by Silicon Valley company Zipline, which now </p>
+        <p>delivers critical blood products to rural medical clinics across our mountainous lands.
+            </p>
+        <br>
+        </span>
+        </div>
+        <div style="text-align:center" >
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+        </div>
+
+    </div>
+    <br><br>
+    <!-- box2-->
+    <div>
+        <div class="box">
+            <div>
+                <p>Why invest</p>
+                <p><h3>Five Reason</h3></p>
+                <img src="photo/Visit-Rwanda_-Kigali-Convention-Centre-1280x853.jpg" alt="">
+            </div>
+            <div>
+                <p>How to invest</p>
+                <p><h3>Start a business</h3></p>
+                <img src="photo/apple-business-click-392018-700x467.jpg" alt="">
+            </div>
+            <div>
+                <p>Investment Opportunies</p>
+                <p><h3>All sectors</p>
+                <img src="photo/Visit-Rwanda_-Kigali-Skyline-to-CBD-1280x853.jpg" alt="">
+            </div>
+            <div>
+                <p>How to Invest</p>
+                <p><h3>One Stop Centre</h3></p>
+                <img src="photo/Visit-Rwanda-Carnegie-Mellon-Innovation-City-1280x853.jpg" alt="">
+            </div>
+        </div>
+    </div><br>
+ <!--meet in rwnda -->  
+    <div class="inv1"int>
+        
+        <p><h2>Meet in Rwanda</h2></p><br><hr>
+        <p> Rwanda is an excellent hub for meetings and events, with world-class </p>
+        <p>facilities such as the Kigali Convention Centre which is conveniently located </p>
+        <p>close to Kigali International Airport and offers a premium environment for </p>
+        <p>regional and international conventions, exhibitions, festivals, meetings and </p>
+        <p>other events.</p></div>
+    </div> 
+    <br><br> 
+ <!--box 3--> 
+ 
+    <div class="box">
+        <div>
+            <p>Business Event</p>
+            <p><h3>Kigali Convention Centre</h3></p>
+            <img src="photo/Visit-Rwanda_-Kigali-Convention-Centre-1280x853.jpg" alt="">
+        </div>
+        <div>
+            <p>Around the Capital</p>
+            <p><h3>Start a business</h3></p>
+            <img src="photo/apple-business-click-392018-700x467.jpg" alt="">
+        </div>
+        <div class="air">
+            <p>National Airline</p>
+            <p><h3>RwandaAir</h3></p>
+            <img src="photo/A330-Rwandair-MSN1741-take-off-006-1280x851.jpg" alt="">
+        </div>
+    </div> 
+    <br><br>
+<!-- patin-->
+    <div class="inv" style="margin-left: 50px;margin-right: 50px;">
+        <p><h2>Partnership</h2></p><br><hr>
+        <p> Visit Rwanda is proud to partner with some of the world’s biggest brands to </p>
+        <p> share the beauty of the country with millions around the globe.</p>    
+        <p><img src="photo/Republic-of-Rwanda1.png" alt="" class="team"></p>
+    </div> 
+</div>
+<!--box 4-->
+<div>
+    <div class="box">
+        <div>
+            <p>Sleeve Sponsor</p>
+            <p><h3>Arsenal</h3></p>
+            <img src="photo/52520908701_6f86ebc762_c-700x467.jpg" alt="">
+        </div>
+        <div>
+            <p>Premium Partner</p>
+            <p><h3>Paris Saint Germain</h3></p>
+            <img src="photo/2B4A2506-700x467.jpg" alt="">
+        </div>
+        <div>
+            <p>Platinum Partner</p>
+            <p><h3>FC Bayern Munchen</p>
+            <img src="photo/FCEA04C9-083F-4F44-AC95-6A011824EBBC-scaled-700x394.jpeg" alt="">
+        </div>
+        <div>
+            <p>Founding and Host Partner</p>
+            <p><h3>Basketball Africa League</h3></p>
+            <img src="photo/Patriots-Visit-Rwanda-Team-700x467.jpeg" alt="">
+        </div>
+        <div style="float: none;">
+            <p>Yellwo Jersey Sponsor</p>
+            <p><h3>Tour du Rwanda</h3></p>
+            <img src="photo/49588354301_3a4d5a840f_k-1-700x417.jpg" alt="">
+        </div>
+    </div><br><br>
+    <!--footer-->
+    <div style="margin-bottom: -90px;">
+    <div class="dropdown" onclick="mk1()">
+       <p><button class="dropbtn" >Investment
+          <i class="fa fa-caret-down"></i>
+        </button></p> 
+        <div class="dropdown-content" id="li" style="position: bsolute;">
+          <a href="#">Five Reasons to Invest </a> 
+        </div>
+    </div>
+    <div class="dropdown" onclick="mk2()">
+        <p><button class="dropbtn" >Meet in Rwanda
+           <i class="fa fa-caret-down"></i>
+         </button></p> 
+         <div class="dropdown-content" id="li2" style="position: bsolute;">
+           <a href="#">Kigali Convention Center  </a> 
+         </div>
+     </div>
+     <div class="dropdown" onclick="mk3()">
+        <p><button class="dropbtn" >Arsenal
+           <i class="fa fa-caret-down"></i>
+         </button></p> 
+         <div class="dropdown-content" id="li3" >
+           <p><a href="#">About The Partnership</a> </p>
+          <p><a href="#">Football in Rwamda</a></p> 
+         </div>
+     </div>
+     <div class="foot">
+        <span>Stories</span>
+        <span>Practical Information</span>
+        <span>Media</span>
+        <span>Book A Trip</span>
+        <p><span>Contact</span></p>
+        <p ><img src="photo/footer-logo.png" alt=""><span style="margin-right: 200px;"> Copyright © 2023- MK</span></p>
+     </div></div>
+</div>
+<script>
+        var div=document.getElementById("m");
+        div.style.left="-1000px";
+        var li=document.getElementById("li").style.display="none";
+        var li=document.getElementById("li2").style.display="none";
+        var li=document.getElementById("li3").style.display="none";
+        function mk1(){
+                   var li=document.getElementById("li2").style.display="none";
+        var li=document.getElementById("li3").style.display="none";
+       
+            var li=document.getElementById("li");
+            if(li.style.display=="none"){
+                li.style.display="block"
+            }else{
+                li.style.display="none"
+            }
+        }
+        function mk2(){
+            var li=document.getElementById("li").style.display="none";
+            var li=document.getElementById("li3").style.display="none";
+       
+            var li=document.getElementById("li2");
+            if(li.style.display=="none"){
+                li.style.display="block"
+            }else{
+                li.style.display="none"
+            }
+        }
+        function mk3(){
+            var li=document.getElementById("li").style.display="none";
+        var li=document.getElementById("li2").style.display="none";
+       
+            var li=document.getElementById("li3");
+            if(li.style.display=="none"){
+                li.style.display="block"
+            }else{
+                li.style.display="none"
+            }
+        }
+       function mk(){
+        var div=document.getElementById("m");
+        console.log(div)
+        if(div.style.left=="-1000px"){
+            div.style.left="0";
+           // div.style.display="block";
+        }else{
+            div.style.left="-1000px";
+            //div.style.display="none"; 
+        }
+       }
+      window.onscroll = function() {scrollFunction()};
+       function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 56) {
+    document.getElementById("h").style.top = "-50px";
+    console.log("nobb")
+  }
+   else {
+    document.getElementById("h").style.top = "0px";
+    document.getElementById("h").style.backgroundColor = "rgba(0, 0, 0, 0)";
+    console.log("he")
+  }if(document.body.scrollTop > 56 || document.documentElement.scrollTop > 56){   
+    document.getElementById("h").style.top = "0px";
+    document.getElementById("h").style.backgroundColor = "#011220";
+    console.log("ggg")
+    }
+} 
+</script>
+</body>
+</html>
